@@ -9,5 +9,6 @@ module.exports = {
       sockPort: 8501,
       sockHost: "localhost"
     }
-  }
+  },
+  filenameHashing: false
 };
