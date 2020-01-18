@@ -8,7 +8,8 @@ module.exports = {
       disableHostCheck: true,
       sockPort: 8501,
       sockHost: "localhost"
-    }
+    },
+    externals: ["vue", "vue-router", /^@vue-mf\/.+/]
   },
   filenameHashing: false
 };
