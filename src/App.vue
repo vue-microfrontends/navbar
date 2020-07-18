@@ -43,9 +43,7 @@
       <div>
         <ul>
           <li>
-            <a
-              class="nav-link"
-              href="https://github.com/vue-microfrontends/root-config"
+            <a class="nav-link" v-bind:href="githubLink"
               >Code / Documentation</a
             >
           </li>
@@ -55,6 +53,14 @@
     <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    githubLink: String,
+  },
+};
+</script>
 
 <style scoped>
 nav {
