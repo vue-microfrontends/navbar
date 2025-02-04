@@ -5,7 +5,6 @@
   "scripts": {
     "serve": "vue-cli-service serve --port 8501",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit --passWithNoTests",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -20,10 +19,8 @@
     "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-eslint": "^5.0.8",
     "@vue/cli-plugin-router": "^5.0.8",
-    "@vue/cli-plugin-unit-jest": "^5.0.8",
     "@vue/cli-service": "^5.0.8",
     "@vue/eslint-config-prettier": "^10.2.0",
-    "@vue/test-utils": "2.4.6",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^9.32.0",
     "prettier": "^3.4.2",
