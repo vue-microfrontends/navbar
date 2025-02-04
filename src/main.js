@@ -1,20 +1,19 @@
-import "./set-public-path";
-import Vue from "vue";
+import { createApp, h } from 'vue';
 import singleSpaVue from "single-spa-vue";
 
 import App from "./App.vue";
 import router from "./router";
 
-Vue.config.productionTip = false;
-
 const vueLifecycles = singleSpaVue({
-  Vue,
+  createApp,
   appOptions: {
-    render(h) {
+    render() {
       return h(App, { props: { githubLink: this.githubLink } });
     },
-    router,
   },
+  handleInstance(app) {
+    app.use(router);
+  }
 });
 
 export const bootstrap = vueLifecycles.bootstrap;

@@ -1,14 +1,10 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
+import { createWebHistory, createRouter } from 'vue-router'
 
-Vue.use(VueRouter);
+const routes = [
+  {path: "/", exact: true, redirect: "/rate-doggos"}
+]
 
-const routes = [{ path: "/", exact: true, redirect: "/rate-doggos" }];
-
-const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
+export default createRouter({
+  history: createWebHistory(),
   routes
-});
-
-export default router;
+})
